@@ -21,6 +21,12 @@ public class calculadora {
 		valor2 = pedirValor();
 		operacion = pedirOperacion();
 		
+		calcular(resultado, valor1, valor2, operacion, suma, resta, division, producto);
+
+	}
+
+	private static void calcular(int resultado, int valor1, int valor2, char operacion, char suma, char resta, char division, char producto) {
+		// TODO Auto-generated method stub
 		if (operacion == suma) {
 			resultado = valor1+valor2;
 		}else if (operacion == resta) {
@@ -34,7 +40,6 @@ public class calculadora {
 		}
 		
 		System.out.println("El resultado es: " + resultado);
-
 	}
 
 	private static char pedirOperacion() {
