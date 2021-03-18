@@ -1,30 +1,29 @@
 package bucles;
 
+/*
+ * Leer un numero hazta que se ingrese 0, para cada uno indicar si es par o impar
+ * */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/*
- * Leer un numero y mostrar su cuadrado, repetir el proceso hasta que se ingrese un numero negativo.
- * */
-
-public class cuadradoNumero {
+public class parImpar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int num, cuadrado; 
+		int num; 
 		
 		num = pedirValor();
 		
-		while (num >=0) {
-			cuadrado = num * num;
-			
-			System.out.println("El cuadrado de " + num + " es: " + cuadrado);
-			
+		while (num !=0) {
+			if ((num%2)==0) {
+				System.out.println("Es par");
+			} else {
+				System.out.println("Es impar");
+			}
 			num = pedirValor();
 		}
-		
-
 
 	}
 
@@ -44,7 +43,5 @@ public class cuadradoNumero {
 		
 		return variableLocal;
 	}
-	
-	
 
 }

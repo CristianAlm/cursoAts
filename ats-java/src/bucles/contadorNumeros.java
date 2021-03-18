@@ -4,28 +4,29 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * Leer un numero y mostrar su cuadrado, repetir el proceso hasta que se ingrese un numero negativo.
+ * Pedir numeros hasta que se ingrese uno negativo, mostrar cuantos numeros se han ingresado
  * */
 
-public class cuadradoNumero {
+public class contadorNumeros {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int num, cuadrado; 
-		
+		int num, contador =0; 
 		num = pedirValor();
 		
-		while (num >=0) {
-			cuadrado = num * num;
-			
-			System.out.println("El cuadrado de " + num + " es: " + cuadrado);
-			
+		contar(num, contador);
+		
+		
+	}
+
+	private static void contar(int num, int contador) {
+		// TODO Auto-generated method stub
+		while (num >0) {
+			contador++;
 			num = pedirValor();
 		}
-		
-
-
+		System.out.println("La cantidad de numeros ingresadoses: " + contador);
 	}
 
 	private static int pedirValor() {
@@ -44,7 +45,5 @@ public class cuadradoNumero {
 		
 		return variableLocal;
 	}
-	
-	
 
 }

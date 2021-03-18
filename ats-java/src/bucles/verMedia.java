@@ -4,28 +4,32 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * Leer un numero y mostrar su cuadrado, repetir el proceso hasta que se ingrese un numero negativo.
+ * Pedir numeros hasta que ingresen un numero negativo y calcular su media 
  * */
 
-public class cuadradoNumero {
+public class verMedia {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int num, cuadrado; 
+		int usuario = 0, sumatoria = 0,contador = 0, media = 0;
 		
-		num = pedirValor();
+		calcularMedia(usuario, sumatoria,contador, media);
+
+	}
+
+	public static void calcularMedia(int usuario, int sumatoria, int contador, int media) {
+		// TODO Auto-generated method stub
+		usuario = pedirValor();
 		
-		while (num >=0) {
-			cuadrado = num * num;
-			
-			System.out.println("El cuadrado de " + num + " es: " + cuadrado);
-			
-			num = pedirValor();
+		while (usuario > 0) {
+			sumatoria += usuario;
+			contador++;
+			usuario = pedirValor();
 		}
 		
-
-
+		media = sumatoria/contador;
+		System.out.println("La media de los numeros ingresados es: " + media);
 	}
 
 	private static int pedirValor() {
@@ -44,7 +48,5 @@ public class cuadradoNumero {
 		
 		return variableLocal;
 	}
-	
-	
 
 }

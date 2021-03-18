@@ -2,33 +2,32 @@ package bucles;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 /*
- * Leer un numero y mostrar su cuadrado, repetir el proceso hasta que se ingrese un numero negativo.
+ * Pedir numeros hasta que se ingrese 0, sumar los numeros ingresados cuando ingresen 0
  * */
 
-public class cuadradoNumero {
+public class sumatoriaHasta0 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int usuario = 0, sumatoria = 0;
 		
-		int num, cuadrado; 
-		
-		num = pedirValor();
-		
-		while (num >=0) {
-			cuadrado = num * num;
-			
-			System.out.println("El cuadrado de " + num + " es: " + cuadrado);
-			
-			num = pedirValor();
-		}
-		
-
-
+		caulcular(usuario, sumatoria);
 	}
 
-	private static int pedirValor() {
+	private static void caulcular(int usuario, int sumatoria) {
+		// TODO Auto-generated method stub
+		
+		usuario = pedirValor();
+		
+		while (usuario !=0) {
+			sumatoria += usuario;
+			usuario = pedirValor();
+		}
+		System.out.println("La sumatoria d elos numeros ingresados es: " + sumatoria);
+	}
+
+	public static int pedirValor() {
 		// TODO Auto-generated method stub
 		int variableLocal=0;
 		
@@ -44,7 +43,5 @@ public class cuadradoNumero {
 		
 		return variableLocal;
 	}
-	
-	
 
 }

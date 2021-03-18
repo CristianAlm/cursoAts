@@ -1,34 +1,33 @@
 package bucles;
 
+/*
+ * Leer un numero y decir si es positivo y negativo, repetir el proceso hasta que se ingrese 0
+ * */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/*
- * Leer un numero y mostrar su cuadrado, repetir el proceso hasta que se ingrese un numero negativo.
- * */
-
-public class cuadradoNumero {
+public class positivoNegativo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int num, cuadrado; 
+		int num; 
 		
 		num = pedirValor();
 		
-		while (num >=0) {
-			cuadrado = num * num;
-			
-			System.out.println("El cuadrado de " + num + " es: " + cuadrado);
-			
+		while (num !=0) {
+			if(num < 0){
+				System.out.println("El numero es negativo");
+			}else {
+				System.out.println("El numero es positivo");
+			}
 			num = pedirValor();
 		}
-		
-
 
 	}
 
-	private static int pedirValor() {
+	public static int pedirValor() {
 		// TODO Auto-generated method stub
 		int variableLocal=0;
 		
@@ -44,7 +43,5 @@ public class cuadradoNumero {
 		
 		return variableLocal;
 	}
-	
-	
 
 }
